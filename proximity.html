@@ -19,7 +19,7 @@
     'use strict';
     window.addEventListener("deviceproximity", function (event) {
       var txt = document.querySelector('.txt');
-      txt.textContent = event.value + ' (' + event.min + ' - ' + event.max + ')';
+      txt.textContent = ((100 * event.value) / event.max) + '%';
     });
     
   </script>
