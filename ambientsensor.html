@@ -18,18 +18,11 @@
   <script>
     'use strict';
 
-    var sensor = new AmbientLightSensor();
-    var txt = document.querySelector('.txt');
+    window.addEventListener("devicelight", function (event) {
 
-    sensor.start();
+      txt.textContent = event.value;
 
-    sensor.onchange = function (event) {
-        txt.textContent = sensor.illuminance;
-    };
-
-    sensor.onerror = function (event) {
-        txt.textContent = event.error.name + ' ' + event.error.message;
-    };  
+    });
   </script>
 </body>
 </html>
