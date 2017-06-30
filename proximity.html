@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Proximity Sensor</title>
+  <style>
+    .txt {
+      width:300px;
+      margin:1em auto;
+      font-size:122px;
+      color:#222;
+    }  
+  </style>
+</head>
+<body>
+  <div class="txt">Test</div>
+  
+  <script>
+    'use strict';
+    window.addEventListener("deviceproximity", function (event) {
+      var txt = document.querySelector('.txt');
+      txt.textContent = event.value + ' (' + event.min + ' - ' + event.max + ')';
+    });
+    
+  </script>
+</body>
+</html>
