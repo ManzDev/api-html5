@@ -18,12 +18,11 @@
   <script>
     'use strict';
 
-    window.addEventListener("DOMContentLoaded", function (event) {
-      window.addEventListener("devicelight", function (event) {
+    var txt = document.querySelector('.txt');
+    window.addEventListener("devicelight", function (event) {
 
-        txt.textContent = event.value;
+      txt.textContent = event.value;
 
-      });
     });
     
   </script>
