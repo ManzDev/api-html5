@@ -18,9 +18,9 @@
   <script>
     'use strict';
 
-    var txt = document.querySelector('.txt');
     window.addEventListener("devicelight", function (event) {
 
+      var txt = document.querySelector('.txt');
       txt.textContent = event.value;
 
     });
