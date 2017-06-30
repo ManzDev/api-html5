@@ -18,11 +18,14 @@
   <script>
     'use strict';
 
-    window.addEventListener("devicelight", function (event) {
+    window.addEventListener("DOMContentLoaded", function (event) {
+      window.addEventListener("devicelight", function (event) {
 
-      txt.textContent = event.value;
+        txt.textContent = event.value;
 
+      });
     });
+    
   </script>
 </body>
 </html>
