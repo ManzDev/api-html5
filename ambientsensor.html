@@ -14,16 +14,31 @@
 </head>
 <body>
   <div class="txt">Test</div>
+  <div class="status"></div>
   
   <script>
     'use strict';
 
+    /*
     window.addEventListener("devicelight", function (event) {
 
       var txt = document.querySelector('.txt');
       txt.textContent = event.value;
 
     });
+    */
+    
+    var sensor = new AmbientLightSensor();
+    sensor.addEventListener('change', function (event) {
+      
+      var txt = document.querySelector('.txt');
+      var status = document.querySelector('.status');
+      console.log(event);
+      txt.textContent = event.value;
+      status.textContent = event;
+      
+    });
+    sensor.start();
     
   </script>
 </body>
