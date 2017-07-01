@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Notification</title>
+  <style>
+    .txt {
+      width:300px;
+      margin:1em auto;
+      font-size:122px;
+      color:#222;
+    }  
+  </style>
+</head>
+<body>
+  <div class="txt">Test</div>
+  <button onClick="showNotify()">Mostrar notificación</button>
+  
+  <script>
+    'use strict';
+    
+    function showNotify() {
+      Notification.requestPermission(function(permission) {
+
+        if (permission === 'granted') {
+          new Notification('Hola a todos', {
+            title: 'Título',
+            vibrate: 100,
+            body: 'Mensaje de texto.',
+            icon: 'https://d30y9cdsu7xlg0.cloudfront.net/png/18418-200.png'
+          });
+        }
+
+      });
+    }
+    
+  </script>
+</body>
+</html>
